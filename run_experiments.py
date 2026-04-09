@@ -233,8 +233,6 @@ for size in array_size:
         for rep in range(repetitions):
             arr = gen_rand_arr(size)
 
-            # save sorted version
-            Sorted_arrays[f'size {size}'].append(sorted(arr))
 
             for alg in selected_algs:
                 arr_copy = arr.copy()
@@ -328,6 +326,8 @@ print("Plot saved as result1.png")
 
 
  # ----Part C----
+ # save sorted version
+Sorted_arrays[f'size {size}'].append(sorted(arr))
 
 results_mean_c = {alg: [] for alg in selected_algs}
 results_std_c = {alg: [] for alg in selected_algs}
